@@ -34,6 +34,9 @@ alias la='ls -al'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias update='checkupdates'
+alias rm='echo "Use trash-put instead"; false'
+
+
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
 
