@@ -1,3 +1,0 @@
-# Potato's Dotfiles 
-
-
