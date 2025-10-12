@@ -36,7 +36,7 @@ alias lt='ls --tree'
 alias update='checkupdates'
 alias rm='echo "Use trash-put instead"; false'
 alias trash='trash-put'
-
+alias cd='z'
 
 
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
