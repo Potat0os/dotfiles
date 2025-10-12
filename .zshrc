@@ -37,6 +37,8 @@ alias update='checkupdates'
 alias rm='echo "Use trash-put instead"; false'
 alias trash='trash-put'
 
+
+
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
 
@@ -44,3 +46,15 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
+
+#eval "$(starship init zsh)"
+#--- yazi ---
+function y() {      
+        local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+        yazi "$@" --cwd-file="$tmp"
+        IFS= read -r -d '' cwd < "$tmp"
+        [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+        trash-put -f -- "$tmp"
+}
+
+eval "$(zoxide init zsh)"
