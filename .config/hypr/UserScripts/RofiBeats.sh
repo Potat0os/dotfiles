@@ -22,13 +22,13 @@ populate_local_music() {
   while IFS= read -r file; do
     local_music+=("$file")
     filenames+=("$(basename "$file")")
-  done < <(find -L "$mDIR" -type f \( -iname "*.mp3" -o -iname "*.webm" -o -iname "*.wav" -o -iname "*.ogg" -o -iname "*.mp4" \))
+  done < <(find -L "$mDIR" -type f \( -iname "*.mp3" -o -iname "*.webm" -o -iname "*.wav" -o -iname "*.ogg" -o -iname "*.mp4" -o -iname "*.aac"  \))
 }
 
 # Function for displaying notifications
-notification() {
-  notify-send -u normal -i "$iDIR/music.png" "Now Playing:" "$@"
-}
+#notification() {
+#  notify-send -u normal -i "$iDIR/music.png" "Now Playing:" "$@"
+#}
 
 # Main function for playing local music
 play_local_music() {
@@ -61,7 +61,7 @@ shuffle_local_music() {
   if music_playing; then
     stop_music
   fi
-  notification "Shuffle Play local music"
+ # notification "Shuffle Play local music"
 
   # Play music in $mDIR on shuffle
   mpv --shuffle --loop-playlist --vid=no "$mDIR"
