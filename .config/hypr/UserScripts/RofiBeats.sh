@@ -49,7 +49,7 @@ play_local_music() {
         stop_music
       fi
 	    notification "$choice"
-      mpv --playlist-start="$i" --loop-playlist --vid=no  "${local_music[@]}"
+      mpv --playlist-start="$i" --loop-playlist --vid=no --volume=23 "${local_music[@]}"
 
       break
     fi
