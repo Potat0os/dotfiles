@@ -49,7 +49,7 @@ play_local_music() {
         stop_music
       fi
 	    notification "$choice"
-      mpv --playlist-start="$i" --loop-playlist --vid=no --volume=23 "${local_music[@]}"
+      mpv --playlist-start="$i" --loop-playlist --vid=no --volume=25 "${local_music[@]}"
 
       break
     fi
@@ -64,7 +64,7 @@ shuffle_local_music() {
  # notification "Shuffle Play local music"
 
   # Play music in $mDIR on shuffle
-  mpv --shuffle --loop-playlist --vid=no "$mDIR"
+  mpv --shuffle --loop-playlist --vid=no --volume=25 "$mDIR"
 }
 
 # Main function for playing online music
