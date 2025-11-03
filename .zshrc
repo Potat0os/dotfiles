@@ -36,8 +36,8 @@ alias lt='ls --tree'
 alias update='checkupdates'
 alias rm='echo "Use trash-put instead"; false'
 alias trash='trash-put'
-alias cd='z'
-
+alias msbah='fastfetch'
+alias yt='yt-dlp'
 
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
@@ -58,3 +58,6 @@ function y() {
 }
 
 eval "$(zoxide init zsh)"
+
+# Created by `pipx` on 2025-10-12 14:27:52
+export PATH="$PATH:/home/potato/.local/bin"
