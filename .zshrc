@@ -38,6 +38,7 @@ alias rm='echo "Use trash-put instead"; false'
 alias trash='trash-put'
 alias msbah='fastfetch'
 alias yt='yt-dlp'
+alias ytmp3='yt -x --audio-format mp3'
 
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
