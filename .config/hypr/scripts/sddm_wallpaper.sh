@@ -46,7 +46,7 @@ else
     wallpaper_path="$wallpaper_modified"
 fi
 
-# Launch terminal and apply changes
+#Launch terminal and apply changes
 $terminal -e bash -c "
 echo 'Enter your password to update SDDM wallpapers and colors';
 

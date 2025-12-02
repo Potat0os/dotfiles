@@ -1,3 +1,4 @@
+
 #!/bin/bash
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # For Rofi Beats to play online Music or Locally saved media files
@@ -49,7 +50,7 @@ play_local_music() {
         stop_music
       fi
 	    notification "$choice"
-      mpv --playlist-start="$i" --loop-playlist --vid=no --volume=25 "${local_music[@]}"
+      mpv --playlist-start="$i" --loop-playlist --vid=no --volume=35 "${local_music[@]}"
 
       break
     fi
@@ -64,7 +65,7 @@ shuffle_local_music() {
  # notification "Shuffle Play local music"
 
   # Play music in $mDIR on shuffle
-  mpv --shuffle --loop-playlist --vid=no --volume=25 "$mDIR"
+  mpv --shuffle --loop-playlist --vid=no --volume=35 "$mDIR"
 }
 
 # Main function for playing online music
