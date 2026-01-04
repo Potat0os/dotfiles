@@ -30,8 +30,7 @@
 	"custom/separator#blank",
 	"clock#3",
 	"custom/separator#blank",
-	"group/notify",
-	"hyprland/language",
+	"group/notify"
 ],
 		
 "modules-right": [
@@ -40,7 +39,7 @@
 	"pulseaudio",
 	"custom/separator#blank",
 	"group/mobo_drawer",
-	"power-profiles-daemon",
+	"custom/nightlight",
 	"custom/power",					
 	],
 }

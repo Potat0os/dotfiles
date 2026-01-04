@@ -28,12 +28,7 @@ source $ZSH/oh-my-zsh.sh
 #fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
 
 # Set-up icons for files/directories in terminal using lsd
-alias ls='lsd'
-alias l='ls -l'
-alias la='ls -al'
-alias lla='ls -la'
 alias lt='ls --tree'
-alias update='checkupdates'
 alias rm='echo "Use trash-put instead"; false'
 alias trash='trash-put'
 alias msbah='fastfetch'

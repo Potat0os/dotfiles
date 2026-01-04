@@ -26,13 +26,13 @@
 	],
     
 "modules-center": [
-	"hyprland/window",
-	"battery" 
+	"hyprland/window", 
 	],
     
 "modules-right": [
 	"idle_inhibitor",
-	"group/notify",	
+	"custom/nightlight",
+	"group/notify",
 	],
 }
 

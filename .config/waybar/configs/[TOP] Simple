@@ -20,21 +20,19 @@
 "margin-top": 2,
 
 "modules-left": [	
-	"idle_inhibitor", 
-	"group/mobo_drawer",
+	"custom/menu", 
 	"hyprland/workspaces#rw",
-	"tray",
-	"mpris", 
+	"mpris",
+	"tray", 
 	],
     
 "modules-center": [
+	"idle_inhibitor",
 	"clock#2",
 	"group/notify",
-	"hyprland/language",
 	],
     
-"modules-right": [
-	"hyprland/window",  
+"modules-right": [  
 	"battery",
  	"group/audio", 
 	"custom/power",
