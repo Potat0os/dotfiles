@@ -1,0 +1,28 @@
+# --- Visual Settings ---
+set linenumbers
+set constantshow
+set linenumbers
+set minibar
+#set nohelp
+set constantshow
+set showcursor 
+
+
+#set showcursor
+
+# --- syntax ---
+include /usr/share/nano/html.nanorc
+include /usr/share/nano/python.nanorc
+include /usr/share/nano/sh.nanorc
+include /usr/share/nano/*.nanorc
+include  /usr/share/nano/extra/*.nanorc
+#include  /usr/share/nano-syntax-highlighting/*.nanorc
+
+
+# --- Formatting / Coding Settings ---
+set autoindent
+set tabsize 4
+set tabstospaces
+set atblanks
+set softwrap
+set positionlog
