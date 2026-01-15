@@ -30,6 +30,7 @@
 	"idle_inhibitor",
 	"clock#2",
 	"group/notify",
+    "hyprland/language",
 	],
     
 "modules-right": [  
