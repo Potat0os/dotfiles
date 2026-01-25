@@ -7,17 +7,7 @@ set minibar
 set constantshow
 set showcursor 
 
-
 #set showcursor
-
-# --- syntax ---
-#include /usr/share/nano/html.nanorc
-#include /usr/share/nano/python.nanorc
-#include /usr/share/nano/sh.nanorc
-#include /usr/share/nano/*.nanorc
-#include  /usr/share/nano/extra/*.nanorc
-#include  /usr/share/nano-syntax-highlighting/*.nanorc
-
 
 # --- Formatting / Coding Settings ---
 set autoindent
@@ -26,6 +16,8 @@ set tabstospaces
 set atblanks
 set softwrap
 set positionlog
+
+# --- Syntax ---
 
 include "~/.nano/apacheconf.nanorc"
 include "~/.nano/arduino.nanorc"
