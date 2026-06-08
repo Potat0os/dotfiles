@@ -53,7 +53,7 @@ play_local_music() {
     if [ "${filenames[$i]}" = "$choice" ]; then
       music_playing && stop_music
       notification "Now Playing:" "$choice"
-      mpv --no-video --playlist-start="$i" --loop-playlist --volume=32 "${local_music[@]}"
+      mpv --no-video --playlist-start="$i" --loop-playlist --volume=70 "${local_music[@]}"
       break
     fi
   done
@@ -63,7 +63,7 @@ play_local_music() {
 shuffle_local_music() {
   music_playing && stop_music
   notification "Shuffle Play local music"
-  mpv --no-video --shuffle --loop-playlist --volume=23 "$mDIR"
+  mpv --no-video --shuffle --loop-playlist --volume=60 "$mDIR"
 }
 
 # Play selected online music

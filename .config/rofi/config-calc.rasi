@@ -12,14 +12,14 @@ mainbox {
 
 /* ---- Window ---- */
 window {
-  width: 30%;
+  width: 25%;
   height: inherit;
 }
 
 /* ---- Entry ---- */
 entry {
   expand: true;
-  placeholder: " 🧮 Calculate";
+  placeholder: " Calculate";
 }
 
 listview {enable: false;}
