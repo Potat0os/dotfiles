@@ -10,7 +10,7 @@ plugins=(
     archlinux
     zsh-autosuggestions
     zsh-completions
-    zsh-history-substring-search 
+    zsh-history-substring-search
     zsh-syntax-highlighting
 )
 
@@ -19,21 +19,17 @@ source $ZSH/oh-my-zsh.sh
 # Check archlinux plugin commands here
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/archlinux
 
-# Display Pokemon-colorscripts
-# Project page: https://gitlab.com/phoneybadger/pokemon-colorscripts#on-other-distros-and-macos
-#pokemon-colorscripts --no-title -s -r #without fastfetch
-#pokemon-colorscripts --no-title -s -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
-
-# fastfetch. Will be disabled if above colorscript was chosen to install
-#fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
-
 # Set-up icons for files/directories in terminal using lsd
 alias lt='ls --tree'
-alias rm='echo "Use trash-put instead"; false'
 alias trash='trash-put'
 alias msbah='fastfetch'
 alias yt='yt-dlp'
 alias ytmp3='yt -x --audio-format mp3'
+alias sudokms='shutdown -h now'
+
+# Canceled command so you dont shoot your self in the foot
+#alias sudo rm='echo "Are you retarted ? use trash"; false'
+alias rm='echo "Use trash instead"; false'
 
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
@@ -45,7 +41,7 @@ setopt appendhistory
 
 #eval "$(starship init zsh)"
 #--- yazi ---
-function y() {      
+function y() {
         local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
         yazi "$@" --cwd-file="$tmp"
         IFS= read -r -d '' cwd < "$tmp"
