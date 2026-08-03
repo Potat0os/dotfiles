@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* ---- 💫 https://github.com/LinuxBeginnings 💫 ---- */
 /* Main Config Calculator */
 /* Submitted by: https://github.com/JosephArmas */
 
@@ -12,7 +12,7 @@ mainbox {
 
 /* ---- Window ---- */
 window {
-  width: 25%;
+  width: 30%;
   height: inherit;
 }
 

@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* ---- 💫 https://github.com/LinuxBeginnings 💫 ---- */
 /* KooL Hyprland Rofi Style 14 */
 
 /* original design from: https://github.com/adi1090x/rofi */
@@ -19,7 +19,7 @@ configuration {
     background-alt:              @color0;
     selected:                    @color13;
     active:                      @color12;
-    urgent:                      #8E3596;
+    urgent:                      @color13;
 }
 
 /*****----- Main Window -----*****/

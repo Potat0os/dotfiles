@@ -1,4 +1,4 @@
-//* ---- 💫 https://github.com/JaKooLit 💫 ---- *//
+//* ---- 💫 https://github.com/LinuxBeginnings 💫 ---- *//
 /* Waybar Modules */
 
 /* NOTE: hyprland-workspaces, Custom Modules, Custom Vertical & Groups on a separate files */
@@ -175,7 +175,7 @@
 },
 
 "hyprland/language": {
-	"format": "Lang: {}",
+	"format": " {} ",
 	"format-en": "US",
 	"format-tr": "Korea",
 	"keyboard-name": "at-translated-set-2-keyboard",

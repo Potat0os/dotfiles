@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+# ==================================================
+#  KoolDots (2026)
+#  Project URL: https://github.com/LinuxBeginnings
+#  License: GNU GPLv3
+#  SPDX-License-Identifier: GPL-3.0-or-later
+# ==================================================
 # Scripts for volume controls for audio and mic 
 
-iDIR="$HOME/.config/swaync/icons"
-sDIR="$HOME/.config/hypr/scripts"
+iDIR="${XDG_CONFIG_HOME:-$HOME/.config}/swaync/icons"
+sDIR="${XDG_CONFIG_HOME:-$HOME/.config}/hypr/scripts"
 
 # Get Volume
 get_volume() {
@@ -29,9 +34,9 @@ get_icon() {
     fi
 
     current=$(pamixer --get-volume)
-    if [[ "$current" -le 30 ]]; then
+    if [[ "$current" -le 20 ]]; then
         echo "$iDIR/volume-low.png"
-    elif [[ "$current" -le 60 ]]; then
+    elif [[ "$current" -le 40 ]]; then
         echo "$iDIR/volume-mid.png"
     else
         echo "$iDIR/volume-high.png"
@@ -59,8 +64,8 @@ notify_user() {
 inc_volume() {
     if [ "$(pamixer --get-mute)" == "true" ]; then
         toggle_mute
-    else
-        pamixer -i "$1" --allow-boost --set-limit 350 && notify_user
+    else                      # Put volume cap at 50 when wearing iems
+        pamixer -i "$1" --allow-boost --set-limit 50 && notify_user
     fi
 }
 
@@ -78,7 +83,7 @@ toggle_mute() {
 	if [ "$(pamixer --get-mute)" == "false" ]; then
 		pamixer -m && notify-send -e -u low -h boolean:SWAYNC_BYPASS_DND:true -i "$iDIR/volume-mute.png" " Mute"
 	elif [ "$(pamixer --get-mute)" == "true" ]; then
-		pamixer -u && notify-send -e -u low -h boolean:SWAYNC_BYPASS_DND:true -i "$(get_icon)" " Volume:" " Switched ON"
+		pamixer -u && notify-send -e -u low -h boolean:SWAYNC_BYPASS_DND:true -i "$(get_icon)" " UnMute"
 	fi
 }
 

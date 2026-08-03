@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* ---- 💫 https://github.com/LinuxBeginnings 💫 ---- */
 /* KooL Hyprland Rofi Style 9 */
 /* Modified version of Rofi Config which was submitted by https://github.com/lonerOrz via Discord */
 
@@ -23,7 +23,7 @@ configuration {
 /*****----- Global Properties -----*****/
 * {    
     BG:    @background;
-    BGA:   @color11;
+    BGA:   @color12;
     FG:    @foreground;
     FGA:   #F28FADff;
     BDR:   @color12;

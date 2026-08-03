@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* ---- 💫 https://github.com/LinuxBeginnings 💫 ---- */
 /* KooL Hyprland Rofi Style 3 - Full screen v2 */
 /* credit: https://github.com/adi1090x/rofi */
 
@@ -26,7 +26,7 @@ configuration {
     background-alt: @color7;
     selected:       @color12;
     active:         @color11;
-    urgent:         red;
+    urgent:         @color13;
     
     border-color:                @selected;
     handle-color:                @selected;

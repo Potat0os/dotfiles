@@ -1,0 +1,45 @@
+/* ---- 💫 https://github.com/LinuxBeginnings 💫 ---- */
+// ### TOP Simple ## //
+
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules",
+  ],
+"layer": "top", 
+"position": "top", 
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"gtk-layer-shell": true,
+"margin-left": 6,
+"margin-right": 6,
+"margin-top": 2,
+
+"modules-left": [	
+    "custom/menu",  
+    "custom/separator#blank_2",	
+	"hyprland/workspaces#rw",
+    "custom/separator#line",
+    "tray",
+	"mpris", 
+	"custom/separator#blank",
+   ],
+    
+"modules-center": [	
+    "idle_inhibitor", 
+    "clock#2",
+    "group/notify",	
+    "hyprland/language", 
+    ],
+    
+"modules-right": [ 
+	"battery",
+ 	"group/audio", 
+	"custom/power",
+	],
+}
+

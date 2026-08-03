@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+# ==================================================
+#  KoolDots (2026)
+#  Project URL: https://github.com/LinuxBeginnings
+#  License: GNU GPLv3
+#  SPDX-License-Identifier: GPL-3.0-or-later
+# ==================================================
 # RofiBeats - unified, dynamic UI (add, remove, manage, play)
 
 mDIR="$HOME/Music/"
-iDIR="$HOME/.config/swaync/icons"
-rofi_theme="$HOME/.config/rofi/config-rofi-Beats.rasi"
-rofi_theme_menu="$HOME/.config/rofi/config-rofi-Beats-menu.rasi"
-music_list="$HOME/.config/rofi/online_music.list"
+iDIR="${XDG_CONFIG_HOME:-$HOME/.config}/swaync/icons"
+rofi_theme="${XDG_CONFIG_HOME:-$HOME/.config}/rofi/config-rofi-Beats.rasi"
+rofi_theme_menu="${XDG_CONFIG_HOME:-$HOME/.config}/rofi/config-rofi-Beats-menu.rasi"
+music_list="${XDG_CONFIG_HOME:-$HOME/.config}/rofi/online_music.list"
 
 mkdir -p "$(dirname "$music_list")"
 [[ -f "$music_list" ]] || touch "$music_list"
@@ -53,7 +58,7 @@ play_local_music() {
     if [ "${filenames[$i]}" = "$choice" ]; then
       music_playing && stop_music
       notification "Now Playing:" "$choice"
-      mpv --no-video --playlist-start="$i" --loop-playlist --volume=70 "${local_music[@]}"
+      mpv --no-video --playlist-start="$i" --loop-playlist --volume=55 "${local_music[@]}"
       break
     fi
   done
@@ -63,16 +68,16 @@ play_local_music() {
 shuffle_local_music() {
   music_playing && stop_music
   notification "Shuffle Play local music"
-  mpv --no-video --shuffle --loop-playlist --volume=60 "$mDIR"
+  mpv --no-video --shuffle --loop-playlist --volume=45 "$mDIR"
 }
 
 # Play selected online music
 #play_online_music() {
 #  if [ ! -s "$music_list" ]; then
-#    notify-send -u low -i "$iDIR/music.png" "No online music found" "Add some with Manage Music"
+#    notify-send -u low -i "$iDIR/music.png" "No online music found" "Add some with #Manage Music"
 #    exit 0
 #  fi
-#  choice=$(awk -F'|' '{print $1}' "$music_list" | sort | rofi -i -dmenu -config "$rofi_theme" \
+#  choice=$(awk -F'|' '{print $1}' "$music_list" | sort | rofi -i -dmenu -config #"$rofi_theme" \
 #    -theme-str 'entry { placeholder: "🌐 Choose Online Station"; }')
 #  [[ -z "$choice" ]] && exit 1
 #  link=$(awk -F'|' -v name="$choice" '$1 == name {print $2; exit}' "$music_list")
@@ -84,6 +89,8 @@ shuffle_local_music() {
 #  notification "Now Playing:" "$choice"
 #  mpv --no-video --shuffle "$link"
 #}
+
+
 
 # Manage online music list (add, remove, view)
 manage_music() {
@@ -116,7 +123,6 @@ manage_music() {
     ;;
   esac
 }
-
 # Main menu
 user_choice=$(printf "%s\n" \
   "Play from Music directory" \

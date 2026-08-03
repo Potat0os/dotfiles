@@ -1,4 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* ---- 💫 https://github.com/LinuxBeginnings 💫 ---- */
 /* KooL_Style 13 (thin) */
 
 /* ---- Configuration ---- */
@@ -25,7 +25,7 @@ configuration {
     background-alt:              @color10;
     selected:                    @color12;
     active:                      @color11;
-    urgent:                      red;
+    urgent:                      @color13;
 
     text-selected:               @background;
     text-color:                  @foreground;
@@ -95,7 +95,7 @@ inputbar {
     border-radius:              10px;
     border-color:               @border-color;
 	background-color:		    @background;
-    background-image:           url("~/.config/rofi/.current_wallpaper", width);
+    background-image:           url("~/.config/rofi/.current_wallpaper_focused", width);
     children:                   [ "textbox-prompt-colon","entry" ];
     border:                     0px;
 }

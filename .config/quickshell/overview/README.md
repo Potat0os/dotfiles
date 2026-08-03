@@ -29,7 +29,7 @@ https://github.com/user-attachments/assets/79ceb141-6b9e-4956-8e09-aaf72b66550c
 - 🎯 Click windows to focus them
 - 🖱️ Middle-click windows to close them  
 - 🔄 Drag and drop windows between workspaces
-- ⌨️ Keyboard navigation (Arrow keys, vim keys, number shortcuts)
+- ⌨️ Keyboard navigation (Arrow keys to switch workspaces, Escape/Enter to close)
 - 💡 Hover tooltips showing window information
 - 🎨 Material Design 3 theming
 - ⚡ Smooth animations and transitions
@@ -40,7 +40,7 @@ https://github.com/user-attachments/assets/79ceb141-6b9e-4956-8e09-aaf72b66550c
 
 - **Hyprland** compositor
 - **Quickshell** ([installation guide](https://quickshell.org/docs/v0.1.0/guide/install-setup/))
-- **Qt 6** with modules: QtQuick, QtQuick.Controls
+- **Qt 6** with modules: QtQuick, QtQuick.Controls, Qt5Compat.GraphicalEffects
 
 ### Setup
 
@@ -70,35 +70,13 @@ https://github.com/user-attachments/assets/79ceb141-6b9e-4956-8e09-aaf72b66550c
 qs -c overview &
 ```
 
-### NixOS
-
-For NixOS users, ensure Quickshell has access to required Qt6 modules:
-
-```nix
-# In your configuration.nix or home-manager config
-environment.systemPackages = with pkgs; [
-  quickshell
-  qt6.qtwayland
-];
-```
-
-If you're using home-manager:
-
-```nix
-home.packages = with pkgs; [
-  quickshell
-  qt6.qtwayland
-];
-```
-
 ## 🎮 Usage
 
 | Action | Description |
 |--------|-------------|
 | **Super + Tab** | Toggle the overview |
-| **Arrow Keys** | Navigate between workspaces |
-| **h / j / k / l** | Vim-style navigation (left/down/up/right) |
-| **1-9, 0** | Jump to Nth workspace in current group (0 = 10th) |
+| **Left/Right Arrow Keys** | Navigate between workspaces horizontally |
+| **Up/Down Arrow Keys** | Navigate between workspace rows |
 | **Escape / Enter** | Close the overview |
 | **Click workspace** | Switch to that workspace |
 | **Click window** | Focus that window |
@@ -160,6 +138,7 @@ Edit `~/.config/quickshell/overview/common/Appearance.qml` to customize:
   - QtQuick
   - QtQuick.Controls
   - QtQuick.Layouts
+  - Qt5Compat.GraphicalEffects
   - Quickshell.Wayland
   - Quickshell.Hyprland
 

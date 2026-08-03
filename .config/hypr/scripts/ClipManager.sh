@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+# ==================================================
+#  KoolDots (2026)
+#  Project URL: https://github.com/LinuxBeginnings
+#  License: GNU GPLv3
+#  SPDX-License-Identifier: GPL-3.0-or-later
+# ==================================================
 # Clipboard Manager. This script uses cliphist, rofi, and wl-copy.
 
 # Variables
-rofi_theme="$HOME/.config/rofi/config-clipboard.rasi"
-msg='👀 **note**  CTRL DEL = cliphist del (entry)   or   ALT DEL - cliphist wipe (all)'
+rofi_theme="${XDG_CONFIG_HOME:-$HOME/.config}/rofi/config-clipboard.rasi"
+msg=' **note**  CTRL DEL = cliphist del (entry)   or   ALT DEL - cliphist wipe (all)'
 # Actions:
 # CTRL Del to delete an entry
 # ALT Del to wipe clipboard contents
@@ -42,7 +47,7 @@ while true; do
             cliphist delete <<<"$result"
             ;;
         11)
-            cliphist wipe
+           cliphist wipe
             ;;
     esac
 done

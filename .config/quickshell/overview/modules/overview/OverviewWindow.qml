@@ -1,3 +1,4 @@
+import QtQuick.Effects
 import QtQuick
 import QtQuick.Layouts
 import Quickshell
@@ -41,7 +42,9 @@ Item { // Window
     height: Math.min((windowData?.size[1] ?? 100) * root.scale, availableWorkspaceHeight)
     opacity: (windowData?.monitor ?? -1) == widgetMonitorId ? 1 : 0.4
 
-    clip: true
+    layer.enabled: true
+    layer.smooth: true
+    layer.mipmap: true
 
     Behavior on x {
         animation: Appearance.animation.elementMoveEnter.numberAnimation.createObject(this)
@@ -56,21 +59,28 @@ Item { // Window
         animation: Appearance.animation.elementMoveEnter.numberAnimation.createObject(this)
     }
 
-    ScreencopyView {
-        id: windowPreview
+    Rectangle {
+        id: clipContainer
         anchors.fill: parent
-        captureSource: GlobalStates.overviewOpen ? root.toplevel : null
-        live: true
+        radius: Appearance.rounding.windowRounding * root.scale
+        clip: true
+        color: "transparent"
 
-        Rectangle {
+        ScreencopyView {
+            id: windowPreview
             anchors.fill: parent
-            radius: Appearance.rounding.windowRounding * root.scale
-            color: pressed ? ColorUtils.transparentize(Appearance.colors.colLayer2Active, 0.5) : 
-                hovered ? ColorUtils.transparentize(Appearance.colors.colLayer2Hover, 0.7) : 
-                ColorUtils.transparentize(Appearance.colors.colLayer2)
-            border.color : ColorUtils.transparentize(Appearance.m3colors.m3outline, 0.7)
-            border.width : 1
-        }
+            captureSource: GlobalStates.overviewOpen ? root.toplevel : null
+            live: true
+
+            Rectangle {
+                anchors.fill: parent
+                radius: Appearance.rounding.windowRounding * root.scale
+                color: pressed ? ColorUtils.transparentize(Appearance.colors.colLayer2Active, 0.5) : 
+                    hovered ? ColorUtils.transparentize(Appearance.colors.colLayer2Hover, 0.7) : 
+                    ColorUtils.transparentize(Appearance.colors.colLayer2)
+                border.color : ColorUtils.transparentize(Appearance.m3colors.m3outline, 0.7)
+                border.width : 1
+            }
 
         ColumnLayout {
             anchors.verticalCenter: parent.verticalCenter
@@ -97,5 +107,6 @@ Item { // Window
                 }
             }
         }
+    }
     }
 }
