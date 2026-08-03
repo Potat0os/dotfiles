@@ -2,4 +2,7 @@
 
 To do list :
 
-Make WallPaper script work.
+Make Satty the main SS tool.
+
+i want to make a rule to wt ever window start with X word  it will apply the rule
+in userconfig.
