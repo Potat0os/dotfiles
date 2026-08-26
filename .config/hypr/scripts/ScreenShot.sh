@@ -41,7 +41,7 @@ notify_view() {
 					;;
 			esac
         else
-            ${notify_cmd_NOT} " Screenshot of:" " ${active_window_class} NOT Saved."
+           # ${notify_cmd_NOT} " Screenshot of:" " ${active_window_class} NOT Saved."
             "${sDIR}/Sounds.sh" --error >/dev/null 2>&1 &
         fi
 
@@ -71,7 +71,7 @@ notify_view() {
 					;;
 			esac
         else
-            ${notify_cmd_NOT} " Screenshot" " NOT Saved"
+            #${notify_cmd_NOT} " Screenshot" " NOT Saved"
             "${sDIR}/Sounds.sh" --error >/dev/null 2>&1 &
         fi
     fi
