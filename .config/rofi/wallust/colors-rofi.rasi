@@ -2,48 +2,48 @@
  /* wallust template - colors-rofi */
 
 * {
-active-background: #D3D6CB;
-active-foreground: #F5F5F2;
-normal-background: #000000;
-normal-foreground: #F5F5F2;
-urgent-background: #E1E0D8;
-urgent-foreground: #F5F5F2;
+active-background: #D0D2CD;
+active-foreground: #F6F5F2;
+normal-background: #151412;
+normal-foreground: #F6F5F2;
+urgent-background: #CEDBD6;
+urgent-foreground: #F6F5F2;
 
-alternate-active-background: #CDD1C6;
-alternate-active-foreground: #F5F5F2;
-alternate-normal-background: #000000;
-alternate-normal-foreground: #F5F5F2;
-alternate-urgent-background: #000000;
-alternate-urgent-foreground: #F5F5F2;
+alternate-active-background: #9B9889;
+alternate-active-foreground: #F6F5F2;
+alternate-normal-background: #151412;
+alternate-normal-foreground: #F6F5F2;
+alternate-urgent-background: #151412;
+alternate-urgent-foreground: #F6F5F2;
 
-selected-active-background: #E1E0D8;
-selected-active-foreground: #F5F5F2;
-selected-normal-background: #E1E0D8;
-selected-normal-foreground: #F5F5F2;
-selected-urgent-background: #E1E0D8;
-selected-urgent-foreground: #F5F5F2;
+selected-active-background: #CEDBD6;
+selected-active-foreground: #F6F5F2;
+selected-normal-background: #CEDBD6;
+selected-normal-foreground: #F6F5F2;
+selected-urgent-background: #CEDBD6;
+selected-urgent-foreground: #F6F5F2;
 
-background-color: #000000;
+background-color: #151412;
 background: rgba(0,0,0,0.7);
-foreground: #F5F5F2;
-border-color: #D3D6CB;
+foreground: #F6F5F2;
+border-color: #D0D2CD;
 
-color0: #000000;
-color1: #666861;
-color2: #797A73;
-color3: #9A9D95;
-color4: #9EA098;
-color5: #A9A8A2;
-color6: #AAAAA4;
-color7: #E8E8E5;
-color8: #A3A2A0;
-color9: #888A82;
-color10: #A2A39A;
-color11: #CDD1C6;
-color12: #D3D6CB;
-color13: #E1E0D8;
-color14: #E2E2DB;
-color15: #E8E8E5;
+color0: #3D3B3A;
+color1: #5F6262;
+color2: #526F71;
+color3: #747267;
+color4: #9C9D9A;
+color5: #9AA4A1;
+color6: #ACA9A4;
+color7: #EAE8E4;
+color8: #A4A2A0;
+color9: #7F8383;
+color10: #6E9496;
+color11: #9B9889;
+color12: #D0D2CD;
+color13: #CEDBD6;
+color14: #E6E2DA;
+color15: #EAE8E4;
 
 
 }
