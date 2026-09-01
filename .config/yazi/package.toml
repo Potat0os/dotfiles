@@ -1,12 +1,12 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "1db18bb"
-hash = "eff8ff12fa4e5f035a10d8aeeb4c258d"
+rev = "c591a36"
+hash = "f281261ff04ad7ec867c3f802a50835f"
 
 [[plugin.deps]]
 use = "KKV9/compress"
-rev = "46a6b9f"
-hash = "771af2becc575a3f43d0542de823969d"
+rev = "80e5268"
+hash = "868db729374b97871bc30b96d0e9061f"
 
 [[plugin.deps]]
 use = "imsi32/yatline"
@@ -20,18 +20,18 @@ hash = "8282baf02fcd6aac00ccad2276775358"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
-rev = "1db18bb"
-hash = "c887903a63a2ff520081b6d90a4b3392"
+rev = "c591a36"
+hash = "d6f7351ea25a43c9b5f4315fa1e23935"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "1db18bb"
-hash = "c8d30a70659f1b880407e61c564ab4e8"
+rev = "c591a36"
+hash = "5bb0bfab901d3601c370eafdd66edd31"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "9014ed2"
-hash = "15e5b67a241172cbb86b8fbf9e63692"
+rev = "c591a36"
+hash = "5b2fbef7d1513ce38ff72623a071a5e"
 
 [flavor]
 deps = []
