@@ -1,4 +1,5 @@
---- @since 25.12.29
+--- @since 26.8.15 
+--- # fix by faethon on github.
 --- @diagnostic disable: undefined-global, undefined-field
 --- @alias Mode Mode Comes from Yazi.
 --- @alias Rect Rect Comes from Yazi.
@@ -625,8 +626,8 @@ function Yatline.string.get:hovered_file_extension(show_icon)
 		end
 
 		if show_icon then
-			local icon = hovered:icon().text
-			return icon .. " " .. name
+			local icon = th.icon:match(hovered)
+			return (icon and icon.text or "") .. " " .. name
 		else
 			return name
 		end
@@ -650,7 +651,7 @@ function Yatline.string.get:tab_path(trimmed, max_length, trim_length)
 	local finder = cx.active.finder
 
 	local t = {}
-	if cwd.is_search then
+	if cwd.spec.is_search then
 		t[#t + 1] = string.format("search: %s", cwd.domain)
 	end
 	if filter then
@@ -697,7 +698,7 @@ function Yatline.string.get:search_query(key)
 
 	local cwd = cx.active.current.cwd
 
-	if cwd.is_search then
+	if cwd.spec.is_search then
 		return string.format("%s %s", key, cwd.domain)
 	else
 		return ""
@@ -1000,7 +1001,7 @@ function Yatline.coloreds.get:count(filter, zero_check)
 
 	if filter then
 		local files_count_fg, files_count_icon
-		if cx.active.current.files.filter or cx.active.current.cwd.is_search then
+		if cx.active.current.files.filter or cx.active.current.cwd.spec.is_search then
 			files_count_fg = Yatline.config.filtereds.fg
 			files_count_icon = Yatline.config.filtereds.icon
 		else
